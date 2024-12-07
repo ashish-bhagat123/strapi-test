@@ -124,6 +124,9 @@
       "relation": "manyToMany",
       "target": "api::skill.skill",
       "inversedBy": "hindiInsights"
+    },
+    "dummyTest": {
+      "type": "string"
     }
   }
 }

@@ -835,6 +835,7 @@ export interface ApiHindiInsightHindiInsight extends Schema.CollectionType {
       'manyToMany',
       'api::skill.skill'
     >;
+    dummyTest: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
