@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "Subject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "subjectId": {
+      "type": "string",
+      "required": true
+    },
+    "subjectName": {
+      "type": "string",
+      "required": true
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skill.skill",
+      "mappedBy": "subject"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "insights": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::insight.insight",
+      "mappedBy": "subjects"
+    },
+    "learners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::learner.learner",
+      "inversedBy": "subjects"
+    },
+    "hindiInsights": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::hindi-insight.hindi-insight",
+      "mappedBy": "subjects"
+    },
+    "podcasts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::podcast.podcast",
+      "mappedBy": "subjects"
+    }
+  }
+}

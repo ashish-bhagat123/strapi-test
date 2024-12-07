@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skills",
+  "info": {
+    "singularName": "skill",
+    "pluralName": "skills",
+    "displayName": "Skill",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "skillName": {
+      "type": "string",
+      "required": true
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "skills"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "skillId": {
+      "type": "integer"
+    },
+    "insights": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::insight.insight",
+      "inversedBy": "skills"
+    },
+    "learners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::learner.learner",
+      "inversedBy": "skills"
+    },
+    "hindiInsights": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::hindi-insight.hindi-insight",
+      "mappedBy": "skills"
+    }
+  }
+}

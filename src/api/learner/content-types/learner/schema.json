@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learners",
+  "info": {
+    "singularName": "learner",
+    "pluralName": "learners",
+    "displayName": "Learner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "collectionId": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "authorName": {
+      "type": "string"
+    },
+    "authorDesignation": {
+      "type": "string"
+    },
+    "timeDuration": {
+      "type": "string"
+    },
+    "youtubeLink": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "featuredInHero": {
+      "type": "boolean",
+      "default": false
+    },
+    "transcript": {
+      "type": "text"
+    },
+    "embeddedLink": {
+      "type": "string"
+    },
+    "schemaDescription": {
+      "type": "text"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subject.subject",
+      "mappedBy": "learners"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skill.skill",
+      "mappedBy": "learners"
+    },
+    "thumbnail": {
+      "type": "string"
+    }
+  }
+}

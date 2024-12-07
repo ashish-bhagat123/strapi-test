@@ -1,0 +1,129 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hindi_insights",
+  "info": {
+    "singularName": "hindi-insight",
+    "pluralName": "hindi-insights",
+    "displayName": "HindiInsights",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "pluginOptions": {}
+    },
+    "collectionId": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "itemId": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "postSummary": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "mainImage": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "mainImageAlt": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "thumbnailImage": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "thumbnailImageAlt": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "featured": {
+      "type": "boolean",
+      "pluginOptions": {}
+    },
+    "color": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "readingTime": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "metaTitle": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "metaDescription": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "featuredOnInsightPage": {
+      "type": "boolean",
+      "pluginOptions": {}
+    },
+    "readMoreFieldName1": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "readMoreFieldName2": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "readMoreFieldLink1": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "readMoreFieldLink2": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "readMoreFieldName3": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "readMoreFieldLink3": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "postBody": {
+      "type": "richtext",
+      "pluginOptions": {}
+    },
+    "tableOfContents": {
+      "type": "richtext",
+      "pluginOptions": {}
+    },
+    "keyTakeaways": {
+      "type": "richtext",
+      "pluginOptions": {}
+    },
+    "featuredOnInsightSubject": {
+      "type": "boolean",
+      "pluginOptions": {}
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subject.subject",
+      "inversedBy": "hindiInsights"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skill.skill",
+      "inversedBy": "hindiInsights"
+    }
+  }
+}

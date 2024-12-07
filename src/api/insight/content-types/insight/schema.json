@@ -1,0 +1,104 @@
+{
+  "kind": "collectionType",
+  "collectionName": "insights",
+  "info": {
+    "singularName": "insight",
+    "pluralName": "insights",
+    "displayName": "Insights",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "collectionId": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "postSummary": {
+      "type": "string"
+    },
+    "mainImage": {
+      "type": "string"
+    },
+    "mainImageAlt": {
+      "type": "string"
+    },
+    "thumbnailImage": {
+      "type": "string"
+    },
+    "thumbnailImageAlt": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "color": {
+      "type": "string"
+    },
+    "readingTime": {
+      "type": "string"
+    },
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "featuredOnInsightPage": {
+      "type": "boolean"
+    },
+    "readMoreFieldName1": {
+      "type": "string"
+    },
+    "readMoreFieldName2": {
+      "type": "string"
+    },
+    "readMoreFieldLink1": {
+      "type": "string"
+    },
+    "readMoreFieldLink2": {
+      "type": "string"
+    },
+    "readMoreFieldName3": {
+      "type": "string"
+    },
+    "readMoreFieldLink3": {
+      "type": "string"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subject.subject",
+      "inversedBy": "insights"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skill.skill",
+      "mappedBy": "insights"
+    },
+    "postBody": {
+      "type": "richtext"
+    },
+    "tableOfContents": {
+      "type": "richtext"
+    },
+    "keyTakeaways": {
+      "type": "richtext"
+    },
+    "featuredOnInsightSubject": {
+      "type": "boolean"
+    }
+  }
+}
